@@ -8,16 +8,24 @@ namespace DEVPROG_DEMO_02.Model
     public class Beer
     {
         //1. PROPERTIES
-        public string Name { get; set; } //: Simple property "prop"
+        //public string Name { get; set; } //: Simple property "prop"
 
         //Simple property alternative "propfull":
-        //private string _name;
+        private string _name;
 
-        //public string Name
-        //{
-        //    get { return _name; }
-        //    set { _name = value; }
-        //}
+        public string Name
+        {
+            get { return _name; }
+            set {
+                if (value != "")
+                {
+                    _name = value.ToUpper();
+                }
+                else { 
+                    _name = "unknown";
+                }
+            }
+        }
 
         public string Brewery { get; private set; } //Readonly property
 
