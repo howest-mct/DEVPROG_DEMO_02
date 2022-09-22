@@ -70,6 +70,7 @@ namespace DEVPROG_DEMO_02
             //call static method GetBeers of Beer class
             List<Beer> allBeers = Beer.GetBeers();
 
+
             //Show all beers in listview using ItemSource property
             lstBeers.ItemsSource = allBeers;
             //print all beers to output window using PrintBeers method
